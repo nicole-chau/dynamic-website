@@ -3,12 +3,12 @@ export const ADD_POST = 'ADD_POST'
 export const EDIT_POST = 'EDIT_POST'
 export const DELETE_POST = 'DELETE_POST'
 
-let id = 0
+let postId = 0
 
 export const editIntro = (image, description) => ({
   type: EDIT_INTRO,
   image,
-  description
+  description,
 })
 
 export const addPost = (title, image, description) => ({
@@ -16,7 +16,7 @@ export const addPost = (title, image, description) => ({
   title,
   image,
   description,
-  id: id++
+  id: postId++,
 })
 
 export const editPost = (title, image, description, id) => ({
@@ -24,10 +24,10 @@ export const editPost = (title, image, description, id) => ({
   title,
   image,
   description,
-  id
+  id,
 })
 
 export const deletePost = id => ({
   type: DELETE_POST,
-  id
+  id,
 })

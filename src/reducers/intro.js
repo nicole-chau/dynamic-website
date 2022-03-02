@@ -4,9 +4,9 @@ const default_input = {}
 
 const intro = (input = default_input, action) => {
   const { type, image, description } = action
-  switch(type) {
+  switch (type) {
     case EDIT_INTRO:
-      return {image, description}
+      return { image, description }
     default:
       return input
   }
