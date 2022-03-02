@@ -7,10 +7,11 @@ const Blog = ({ posts }) => {
 
   return(
     <>
-      <h1>Blog Posts</h1>
       <NewPost />
       <br/>
+      <div className="grid grid-cols-3 gap-4 my-6">
       {posts.map(post => <Post key={post.id} post={post}/>)}
+      </div>
     </>
   )
 }

@@ -22,34 +22,36 @@ const EditPost = ({ setIsEditing, post, dispatchEditPost, dispatchDeletePost }) 
   }
 
   return (
-    <>
-        <h2>New Post</h2>
+    <div className="p-5">
         <p>Title</p>
         <form onSubmit={handleSave}>
           <input
             placeholder="Enter the title of the post"
             onChange={e => setNewTitle(e.target.value)}
             defaultValue={newTitle}
+            className="block w-full p-2 my-2 border-2 rounded"
           />
           <p>Image</p>
           <input
             placeholder="Enter image url"
             onChange={e => setNewImage(e.target.value)}
             defaultValue={newImage}
+            className="block w-full p-2 my-2 border-2 rounded"
           />
           <p>Description</p>
           <textarea
             placeholder="Enter description"
             onChange={e => setNewDescription(e.target.value)}
             defaultValue={newDescription}
+            className="block w-full p-2 my-2 border-2 rounded"
           />
-          <button type="submit">Save</button>
-          <button onClick={() => setIsEditing(false)}>Cancel</button>
+          <button type="submit" className="bg-green-600 text-white p-2 rounded mr-2">Save</button>
+          <button onClick={() => setIsEditing(false)} className="bg-neutral-400 text-white p-2 rounded">Cancel</button>
         </form>
         <form onSubmit={handleDelete}>
-          <button type="submit">DELETE POST</button>
+          <button type="submit" className="bg-red-500 text-white p-2 rounded mt-2">DELETE POST</button>
         </form>
-      </>
+      </div>
   )
 }
 
